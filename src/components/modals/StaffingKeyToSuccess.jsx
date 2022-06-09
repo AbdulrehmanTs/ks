@@ -15,8 +15,7 @@ const StaffingKeyToSuccess = ({ id, name }) => {
 
         const closeModal = () => {
                 document.getElementById(id).classList.remove('active')
-                // document.getElementById('staffingKeyToSuccess').classList.add('active')
-
+                document.getElementById('staffingCourses').classList.add('active')
         }
         useEffect(() => {
                 window.addEventListener('click', (e) => {
