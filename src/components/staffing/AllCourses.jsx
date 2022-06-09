@@ -15,7 +15,7 @@ export default function AllCourses({ setChecList, selectedProgram, setSelectedPr
     return (
         <div className="news_container" id="courses">
 
-            <h3 style={{ textAlign: 'center', marginBottom: '50px' }}>Khansortium Training program</h3>
+            <h3 style={{ textAlign: 'center', marginBottom: '50px', fontSize: '24px' }}>Khansortium Training Programs</h3>
             <div className='new_vertical_cards_container'>
 
                 {cardsContent.map(card =>
