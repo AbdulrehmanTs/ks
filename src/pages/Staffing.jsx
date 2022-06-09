@@ -47,6 +47,9 @@ const Staffing = () => {
                 <button onClick={openModal} className='FirstHeroBtnForVerticalPage'>
                   Training
                 </button>
+                <button onClick={openModal} className='SecondHeroBtnForVerticalPage'>
+                  Join Now
+                </button>
 
 
 
