@@ -81,6 +81,12 @@
     color: #fff;
   }
 
+  
+  .modalCloseBtn:hover{
+    border-radius: 8px;
+    background-color: #f4f5f7;
+    cursor: pointer;
+  }
  
   
   
