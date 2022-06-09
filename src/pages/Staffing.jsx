@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../components/layout/Layout'
 import staffing from '../assets/companies/staffing.webp'
 import StaffingSessionModal from '../components/modals/StaffingSessionModal'
@@ -12,12 +12,15 @@ const Staffing = () => {
 
   const [checkList, setChecList] = useState('')
   const [loggedIn, setLoggedIn] = useState(false)
-  const [training, setTraining] = useState(false)
+  const [selectedProgram, setSelectedProgram] = useState("")
 
   const openModal = () => {
-    setTraining(true)
-    document.getElementById('staffingSessionModal').classList.add('active')
+    document.getElementById('staffingLogin').classList.add('active')
   }
+
+  useEffect(() => {
+    console.log(selectedProgram)
+  }, [selectedProgram])
   return (
     <Layout>
       <div id="Hero" className="Hero">
@@ -44,16 +47,12 @@ const Staffing = () => {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, autem. Nobis sint placeat incidunt nisi, reiciendis quo iure esse magni. Explicabo consequuntur nostrum nesciunt eaque libero harum quo possimus sapiente.
                 </p>
 
-                <button onClick={openModal} className='FirstHeroBtnForVerticalPage'>
+                <button onClick={() => window.location.href = "/vertical/staffing#courses"} className='FirstHeroBtnForVerticalPage'>
                   Training
                 </button>
-                <button onClick={openModal} className='SecondHeroBtnForVerticalPage'>
+                <button className='SecondHeroBtnForVerticalPage'>
                   Join Now
                 </button>
-
-
-
-
 
               </div>
             </div>
@@ -64,11 +63,11 @@ const Staffing = () => {
         </div>
 
         <StaffingSessionModal id='staffingSessionModal' />
-        <StaffingLogin training={training} loggedIn={loggedIn} setLoggedIn={setLoggedIn} id='staffingLogin' />
-        <StaffingCourses setChecList={setChecList} id='staffingCourses' />
+        <StaffingLogin loggedIn={loggedIn} setLoggedIn={setLoggedIn} id='staffingLogin' />
+        <StaffingCourses selectedProgram={selectedProgram} setChecList={setChecList} id='staffingCourses' />
         <StaffingKeyToSuccess name={checkList} id='staffingKeyToSuccess' />
       </div>
-      <AllCourses setTraining={setTraining} setChecList={setChecList} />
+      <AllCourses openModal={openModal} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram} setChecList={setChecList} />
     </Layout>
   )
 }

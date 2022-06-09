@@ -7,11 +7,8 @@ const StaffingLogin = ({ id, loggedIn, setLoggedIn, training }) => {
 
   const closeModal = () => {
     document.getElementById(id).classList.remove('active')
-    if (training) {
-      document.getElementById('staffingCourses').classList.add('active')
-    } else {
-      document.getElementById('staffingKeyToSuccess').classList.add('active')
-    }
+    document.getElementById('staffingCourses').classList.add('active')
+
 
   }
   useEffect(() => {

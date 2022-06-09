@@ -17,24 +17,23 @@ export const coursesData = [
     {
         name: 'Social Media Marketing',
         checkList: [
-            "Make sure customer submits google review after every sale",
-            "Locate the store on google maps",
-            "Click reviews and have the customer fill in their experience of visiting our store",
-            "Ensure the customer share the reviews on any given platform",
-            "Visit Whole Cell Accessories page",
-            "Click on stars",
-            "Select the “Write A Review” button",
-            "Hand the phone to the customer to share their store experience",
-            "Encourage customers to follow, like and comment on our Instagram pages",
-            "Open our Instagram page on customer phone",
-            "Ask them to follow and look out for new deals, and discount offers on the page",
-            "Each store should post 1 to 2 advertisements per day",
-            "Ads should contain the range of our services like, Cellphone Repairs, Tablets, Desktop Systems, and Laptops",
-            "Advertisements should also cover the range of accessories we offer at each store"
+            "Google Reviews",
+            "Facebook",
+            "Instagram",
+            "Craigslist"
         ]
     },
     {
         name: 'Outdoor Advertisement',
+        checkList: [
+            "Pizza delivery to other business",
+            "Drop off flyers and/or post cards to businesses and homes",
+            "Business Leads",
+            "Store outside building, parking lot, signs, banners, and flags"
+        ]
+    },
+    {
+        name: 'Store Floor Work ',
         checkList: [
             "Receive Inventory",
             "Cycle Count",
@@ -43,20 +42,6 @@ export const coursesData = [
             "Check New Phones",
             "Check New Products",
             "Check Training and Knowledge Videos",
-            "View Sales Log",
-            "View Z Report",
-        ]
-    },
-    {
-        name: 'Store Floor Work / Operations',
-        checkList: [
-            "Receive Inventory",
-            "Cycle Count",
-            "Daily Item Requests",
-            "Check Inbound / Outbound",
-            "Check New Phones",
-            "Check New Products",
-            "Check Training and Knowledge Videos ",
             "View Sales Log",
             "View Z Report",
             "View Dashboard",
@@ -89,7 +74,7 @@ export const coursesData = [
             "Keep Pouches Up to Date",
             "Keep Car Holders Up to Date",
             "FM Transmitters and Car Holder Bundle Deal",
-            "Keep WiFi dongles Up to Date"
+            "Keep WiFi dongles Up to Date",
         ]
     },
 ]

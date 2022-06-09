@@ -18,8 +18,29 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
+const tempData = [
+  {
+    name: 'course 1',
+  },
+  {
+    name: 'course 2',
+  },
+  {
+    name: 'course 3',
+  },
+  {
+    name: 'course 4',
+  },
+  {
+    name: 'course 5',
+  },
+  {
+    name: 'course 6',
+  },
+]
 
-const StaffingCourses = ({ id, setChecList }) => {
+
+const StaffingCourses = ({ id, setChecList, selectedProgram }) => {
   const closeModal = (e) => {
     document.getElementById(id).classList.remove('active')
     document.getElementById('staffingKeyToSuccess').classList.add('active')
@@ -39,13 +60,22 @@ const StaffingCourses = ({ id, setChecList }) => {
       <h2>Courses</h2>
       <Grid container spacing={2}>
         {
-          coursesData.map((item, index) => {
-            return (
-              <Grid key={index} onClick={(e) => closeModal(e)} item xs={12} md={6} >
-                <Item>{item.name}</Item>
-              </Grid>
-            )
-          })
+          selectedProgram == "Whole Cell Accessories" ?
+            coursesData.map((item, index) => {
+              return (
+                <Grid key={index} onClick={(e) => closeModal(e)} item xs={12} md={6} lg={4} >
+                  <Item>{item.name}</Item>
+                </Grid>
+              )
+            })
+            :
+            tempData.map((item, index) => {
+              return (
+                <Grid key={index} item xs={12} md={6} lg={4} >
+                  <Item>{item.name}</Item>
+                </Grid>
+              )
+            })
         }
       </Grid>
     </Modal>

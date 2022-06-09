@@ -3,18 +3,30 @@ import StaffingKeyToSuccess from '../modals/StaffingKeyToSuccess'
 import StaffingLogin from '../modals/StaffingLogin'
 import { coursesData } from './coursesData'
 import './styles.css'
+import cardsContent from '../../assets/data/vericalcards.js'
+import StaffingVerticalCard from '../landing/StaffingVerticalCard'
 
-export default function AllCourses({ setChecList, setTraining }) {
+export default function AllCourses({ setChecList, selectedProgram, setSelectedProgram, openModal }) {
 
-    const courseHandler = (i) => {
-        setChecList(i.name)
-        setTraining(false)
-        document.getElementById('staffingLogin').classList.add('active')
-    }
+    // const courseHandler = (i) => {
+    //     setSelectedProgram(i.name)
+    //     document.getElementById('staffingLogin').classList.add('active')
+    // }
     return (
-        <div className="news_container">
-            <h1 style={{ textAlign: 'center', marginBottom: '50px' }}>All Courses</h1>
+        <div className="news_container" id="courses">
 
+            <h3 style={{ textAlign: 'center', marginBottom: '50px' }}>Khansortium Training program</h3>
+            <div className='new_vertical_cards_container'>
+
+                {cardsContent.map(card =>
+
+                    <StaffingVerticalCard key={card.img} openModal={openModal} card={card} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram} />
+
+                )}
+            </div>
+
+
+            {/* <h1 style={{ textAlign: 'center', marginBottom: '50px' }}>All Courses</h1>
             <div className='newsBoxes'>
                 {
                     coursesData.map((item, index) => {
@@ -31,7 +43,8 @@ export default function AllCourses({ setChecList, setTraining }) {
                     })
                 }
 
-            </div>
+            </div> */}
+
         </div>
     )
 }
