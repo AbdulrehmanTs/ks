@@ -2,7 +2,7 @@ import { Grid, Paper, styled, TextField } from '@material-ui/core'
 import React, { useEffect } from 'react'
 import Modal from './Modal'
 import { coursesData } from '../../components/staffing/coursesData'
-import { RiArrowGoBackLine } from 'react-icons/ri'
+import { BsArrowLeftShort } from 'react-icons/bs'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -62,7 +62,7 @@ const StaffingCourses = ({ id, setChecList, selectedProgram }) => {
   })
   return (
     <Modal id={id}>
-      <RiArrowGoBackLine className='modalCloseBtn' size={26} onClick={closeModal} />
+      <BsArrowLeftShort className='modalCloseBtn' size={30} onClick={closeModal} />
       <h2>Courses</h2>
       <Grid container spacing={2}>
         {
