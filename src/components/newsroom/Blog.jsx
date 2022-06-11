@@ -4,6 +4,7 @@ import Blogs from "./BlogContents";
 import { useParams } from "react-router-dom";
 import styles from './blog.module.css'
 import ReactMarkdown from 'react-markdown';
+import crescentCricketClubLogo from '../../assets/crescent-cricket-club-logo.png'
 
 const Blog = () => {
   const { title } = useParams();
@@ -20,6 +21,13 @@ const Blog = () => {
         />
       </div>
       <div className="news_container">
+        {
+          title === "Barrington Crescent Cricket Club Squad for American T20 Championship 2022" && (
+            <div style={{ textAlign: "center", marginBottom: '10px' }}>
+              <img src={crescentCricketClubLogo} alt="logo" />
+            </div>
+          )
+        }
         <h1 className="news_heading">{heading}</h1>
         <span className="news_sub_heading">{date}</span>
         {referencedFrom && (
